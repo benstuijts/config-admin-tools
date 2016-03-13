@@ -1,21 +1,16 @@
-var config = require('./src/config-admin-tools');
+var config      = require('./config-admin-tools');
 var http        = require('http');
-var express = require('express');
-var bodyParser = require('body-parser')
+var express     = require('express');
+var bodyParser  = require('body-parser');
 
 var app = express();
 var server = http.createServer(app);
 
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
-})); 
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+
+app.get('/', function(req, res){
+    res.send('test route');
 });
-
-
 
 server.listen(process.env.PORT , function () {
   console.log('Example app listening on port' + process.env.PORT );
@@ -45,6 +40,7 @@ config.init({
     debug: true,
     configFiles: "./config"
 });
+
 
 
 
