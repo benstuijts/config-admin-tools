@@ -26,6 +26,8 @@
   "dependencies": {
     "body-parser": "^1.15.0",
     "colors": "^1.1.2",
-    "ejs": "^2.4.1"
+    "ejs": "^2.4.1",
+    "express-session": "^1.13.0",
+    "jsonfile": "^2.2.3"
   }
 }

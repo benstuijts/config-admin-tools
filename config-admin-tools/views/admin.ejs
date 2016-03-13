@@ -1,0 +1,57 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Welcome to Config Admin Tools <a href="<%= configRouteName %>/logout" class="btn btn-danger">Logout</a></h1> 
+        
+        <div class="row">
+            <!-- Aside window -->
+            <div class="col-sm-12 col-md-2">
+                <h3>Config Files</h3>
+                <ul class="list-group">
+                <% for(var i=0; i<configFileNames.length;i++) { %>
+                    <li class="list-group-item"><a href="<%= configRouteName %>/core/open/<%=configFileNames[i]%>"><%= configFileNames[i] %></a></li>
+                <% } %>
+                     
+                
+                    
+                </ul>
+                
+                <form class="form-inline" method="POST" action="<%= configRouteName %>/core">
+                    <div class="form-group">
+                        <input style="width: 80%;" type="text" class="form-control" id="newfile" placeholder="*.json" name="newfile">
+                        <button type="submit" class="btn btn-primary btn-sm">+</button>
+                    </div>
+                </form>
+                
+                
+                
+            </div>
+            <!-- Main window -->
+            <div class="col-sm-12 col-md-10">
+                
+                <% if(message.text!='') { %>
+                    <div class="alert alert-<%= message.type%>">
+                        <%= message.text %>
+                    </div>
+                <% } %>
+                
+                
+                <% if (configFilename != '') { %>
+                    <div class="alert alert-info">
+                        <%= configFilename %>
+                    </div>
+                <% } %>
+                
+                
+                
+            </div>
+            
+        </div>
+        
+        
+    </div>
+</body>
+</html>

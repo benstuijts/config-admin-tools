@@ -1,0 +1,14 @@
+{
+    "name" : "Config Admin Tools",
+    "description" : "Handy Tool to administrate your json of MongoDB Config files online",
+    "version" : "0.0.1",
+    "level 1" : {
+        "property" : "property of level 1",
+        "level 2" : {
+            "property" : "property of level 2",
+            "level 3" : {
+                "property" : "property of level 3"
+            },
+        },
+    },
+}

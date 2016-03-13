@@ -38,7 +38,7 @@ config.init({
     password: "123",
     server: app,
     debug: true,
-    configFiles: "./config"
+    
 });
 
 
